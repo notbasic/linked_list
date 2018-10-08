@@ -28,7 +28,19 @@ class linked_list:
         while current_node.next!= None:      # checking if there is a next node
             current_node = current_node.next       # setting current node to the next node.
             lst.append(current_node.data)           # adding the current node data to the list
-        print(lst)                                  # printing the list
+        return print(lst)       # printing the list
+
+        def __str__(self):   # i dont get this
+
+            str_repr= ""
+            for el in self.data:
+                str_repr += str(el)+ "\n"
+            str_repr = "".join(reversed(str_repr.strip()))
+
+        return str_repr                                # printing the list
+
+
+
 
 my_list = linked_list()   # created a new instance of a linked_list
 
